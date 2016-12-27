@@ -1,6 +1,5 @@
 var sampleCode = '[a <- 7]\n[b <- 5]\n[DISPLAY | a |]\n[ IF ( a ≤ 7)\n   [ a <- 6 ]\nELSE\n  [[IF ( a ≥ 10)\n   [ a <- 10 ]]]\n]\n\n[REPEAT 5 TIMES\n  [[DISPLAY |\"foo\"|]]\n]\n[REPEAT UNTIL (a ≤ 10)\n  [[DISPLAY |\"foo\"|]]\n]\n[FOR EACH item IN list\n  [[DISPLAY |item|]\n[IF (foo=blah)\n  [[DISPLAY |\"oy\"|]]\n]\n]]\n[PROCEDURE |a, b, c|\n  [[a <- 5]\n[IF (a = 5)\n  [[b <- a+b]]\n]]]\n[display]';
 
-
 /*
 Conversions:  Find all occurances of a in text replace with b
 NOTE: order matters here
