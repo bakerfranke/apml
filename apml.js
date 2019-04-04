@@ -46,10 +46,22 @@ function fontSize(){
 }
 
 /*
-* Load sample from hard-coded global var
+ * pass ?code=TEXT in the URL to prefill the page with a specific example.
+ */
+function getCodeFromURL() {
+  try {
+    return new URL(document.URL).searchParams.get('code')
+  } catch {
+    return null;
+ }
+}
+
+/*
+* Load sample from hard-coded global var, or pre-filled via the URL
 */
 function loadSample(){
-  $("#code").val(sampleCode);
+  urlCode = getCodeFromURL();
+  $("#code").val(urlCode || sampleCode);
   convert();
 }
 
